@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Raleway');
+*,body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3) url('https://images.unsplash.com/photo-1450705354661-932f7b21aa51?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=&bg=') no-repeat center top;
+  background-size: cover;
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  .center-block {
+    text-align: center;
+    
+  }
+}
+#notify-form {
+  input {
+    border: none;
+    padding: 5px;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+  }
+}
+.btn {
+  color: white;
+  background-color: rgba(0,200,0,0.6);
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.social-container {
+  img {
+    margin: 0 5px;
+    text-decoration: none;
+    transition: transform 2s ease-out 0s;
+  }
+  img:hover  {
+    transform: scale(10%);
+  }
+}
+.link-adithi {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: #ffffff;
+}
+
+.link-adithi:hover,.pro-hover {
+	color: orange;
+}
+
+.link-adithi::after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: orangered;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link-adithi:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.link-adithi::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #ffffff;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.link-adithi:hover::before {
+	width: 100%;
+}
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 8em;
+	line-height: 1;
+	color: #ffffff;
+	display: inline-block;
+}

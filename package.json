@@ -1,0 +1,24 @@
+{
+  "name": "adithi",
+  "version": "1.0.0",
+  "description": "Coming Soon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --output-style compressed --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "serve": "browser-sync start --server --files \"css/*.css\""
+  },
+  "keywords": [
+    "adithi"
+  ],
+  "author": "Boy With Silver Wings",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "whatwg-fetch": "^2.0.3"
+  }
+}
